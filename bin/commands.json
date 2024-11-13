@@ -1,0 +1,132 @@
+{
+  "commands": [
+    {
+      "command": "AT+QGMR",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+CFUN=4",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QCCID",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QCFG=\"nwscanseq\",0",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QCFG=\"nwscanmode\",0",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+CGACT=0,1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+COPS=3,2",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+COPS=0",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+CFUN=1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+CGDCONT=1,\"IP\",\"internet\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+CREG=1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+CREG?",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QNTP=1,\"0.pool.ntp.org\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"ignorelocaltime\",2,1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QFDEL=\"tb_server_slf_Cert.pem\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QFDEL=\"DV005_client_cert.pem\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QFDEL=\"DV005_private.pem\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QFUPL=\"tb_server_slf_Cert.pem\"",
+      "expected_response": "CONNECT"
+    },
+    {
+      "command": "AT+QFUPL=\"DV005_client_cert.pem\"",
+      "expected_response": "CONNECT"
+    },
+    {
+      "command": "AT+QFUPL=\"DV005_private.pem\"",
+      "expected_response": "CONNECT"
+    },
+    {
+      "command": "AT+QSSLCFG=\"cacert\",2,\"tb_server_slf_Cert.pem\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"clientcert\",2,\"DV005_client_cert.pem\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"clientkey\",2,\"DV005_private.pem\"",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"sslversion\",2,3",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"sni\",2,1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"ciphersuite\",2,0XFFFF",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QMTCFG=\"version\",1,4",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QMTCFG=\"ssl\",1,1,2",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QMTCFG=\"timeout\",1,10,3,1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QMTCFG=\"keepalive\",1,300",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QMTOPEN=1,\"iot.glintech.net\",8883",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QFLST=\"*\"",
+      "expected_response": "OK"
+    }
+  ]
+}
