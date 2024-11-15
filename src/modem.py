@@ -17,6 +17,16 @@ class Modem:
     def __init__(self):
         self.modem_port = None
         self.ser = None
+        self.log_dir = "logs"
+        parent_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))  # Получаем родительскую директорию
+        self.log_path = os.path.join(parent_dir, self.log_dir)
+
+        # Создаем папку 'logs', если она не существует
+        if not os.path.exists(self.log_path):
+            os.makedirs(self.log_path)
+
+        # Указываем путь к лог-файлу внутри папки 'logs'
+        self.log_file = os.path.join(self.log_path, "modem_log.txt")
 
     def find_modem_port(self):
         """Checks all available ports and searches for a modem that responds to AT commands."""
@@ -132,6 +142,7 @@ class Modem:
                     # Отправляем команду
                     self.ser.write(f"{command}\r".encode())
                     time.sleep(1)  # Задержка между командами
+                    self.log_command_and_response(command, None)
 
 
                     # Если команда - QFUPL и ответ "CONNECT", отправить файл
@@ -146,6 +157,8 @@ class Modem:
 
                                         # Чтение ответа
                     response = self.ser.read_all().decode().strip()
+
+                    self.log_command_and_response(command, response)
 
                     # Вывод команды и ответа в таблицу
                     self.print_table([[command, response]], Fore.GREEN if expected_response in response else Fore.RED)
@@ -188,6 +201,8 @@ class Modem:
             # Чтение ответа от модема
             response = self.ser.read_all().decode().strip()
             logging.debug(f"Ответ от модема: {response}")
+
+            self.log_command_and_response(at_command, response)
             
             # Проверяем, готов ли модем к загрузке
             if "CONNECT" in response:
@@ -203,6 +218,7 @@ class Modem:
                 time.sleep(2)
                 final_response = self.ser.read_all().decode().strip()
                 logging.debug(f"Финальный ответ от модема: {final_response}")
+                self.log_command_and_response(f"Sending file: {filename}", final_response)
                 
                 # Проверяем, что в ответе от модема указан размер файла, и сравниваем с реальным размером
                 if final_response.startswith("+QFUPL:"):
@@ -240,7 +256,7 @@ class Modem:
 
             # Логируем фактический ответ от модема и команду для сравнения
             logging.debug(f"Получен ответ от модема: '{response}' для команды: '{command}'")
-
+            self.log_command_and_response(command, response)
             # Обработка ответа:
             if "OK" in response:
                 # Если ответ OK, то файл успешно удален
@@ -273,7 +289,20 @@ class Modem:
         :param color: Color for the table output.
         """
         print(color + tabulate(rows, headers=["Message", "Details"], tablefmt="grid") + Style.RESET_ALL)
-
+    
+    def log_command_and_response(self, command, response):
+        """Логирует команду и ответ с таймштампом в файл."""
+        try:
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            with open(self.log_file, 'a') as log_file:
+                log_file.write(f"{timestamp} - Command: {command}\n")
+                if response:
+                    log_file.write(f"{timestamp} - Response: {response}\n")
+                else:
+                    log_file.write(f"{timestamp} - Waiting for response...\n")
+                log_file.write("\n")
+        except Exception as e:
+            logging.error(f"Ошибка при записи в лог: {e}")
 if __name__ == "__main__":
     modem = Modem()
     modem.find_modem_port()

@@ -53,10 +53,6 @@
       "expected_response": "OK"
     },
     {
-      "command": "AT+QSSLCFG=\"ignorelocaltime\",2,1",
-      "expected_response": "OK"
-    },
-    {
       "command": "AT+QFDEL=\"tb_server_slf_Cert.pem\"",
       "expected_response": "OK"
     },
@@ -93,7 +89,7 @@
       "expected_response": "OK"
     },
     {
-      "command": "AT+QSSLCFG=\"sslversion\",2,3",
+      "command": "AT+QSSLCFG=\"sslversion\",2,4",
       "expected_response": "OK"
     },
     {
@@ -105,11 +101,23 @@
       "expected_response": "OK"
     },
     {
+      "command": "AT+QSSLCFG=\"ignorelocaltime\",2,1",
+      "expected_response": "OK"
+    },
+    {
       "command": "AT+QMTCFG=\"version\",1,4",
       "expected_response": "OK"
     },
     {
-      "command": "AT+QMTCFG=\"ssl\",1,1,2",
+      "command": "AT+QMTCFG=\"recv/mode\",0,0,1",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QMTCFG=\"SSL\",0,1,2",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLCFG=\"seclevel\",2,2",
       "expected_response": "OK"
     },
     {
@@ -118,6 +126,10 @@
     },
     {
       "command": "AT+QMTCFG=\"keepalive\",1,300",
+      "expected_response": "OK"
+    },
+    {
+      "command": "AT+QSSLOPEN=1,1,4,\"iot.glintech.net\",8883",
       "expected_response": "OK"
     },
     {

@@ -1,0 +1,261 @@
+2024-11-13 18:08:42 - Command: AT+QGMR
+2024-11-13 18:08:42 - Waiting for response...
+
+2024-11-13 18:08:42 - Command: AT+QGMR
+2024-11-13 18:08:42 - Response: AT+QGMR
+EG916QGLLGR01A04M04_01.001.01.001
+
+OK
+
+2024-11-13 18:08:43 - Command: AT+CFUN=4
+2024-11-13 18:08:43 - Waiting for response...
+
+2024-11-13 18:08:43 - Command: AT+CFUN=4
+2024-11-13 18:08:43 - Response: AT+CFUN=4
+OK
+
++QIURC: "pdpdeact",1
+
+2024-11-13 18:08:44 - Command: AT+QCCID
+2024-11-13 18:08:44 - Waiting for response...
+
+2024-11-13 18:08:44 - Command: AT+QCCID
+2024-11-13 18:08:44 - Response: AT+QCCID
++QCCID: 8938001630006846667F
+
+OK
+
+2024-11-13 18:08:45 - Command: AT+QCFG="nwscanseq",0
+2024-11-13 18:08:45 - Waiting for response...
+
+2024-11-13 18:08:45 - Command: AT+QCFG="nwscanseq",0
+2024-11-13 18:08:45 - Response: AT+QCFG="nwscanseq",0
+OK
+
+2024-11-13 18:08:46 - Command: AT+QCFG="nwscanmode",0
+2024-11-13 18:08:46 - Waiting for response...
+
+2024-11-13 18:08:46 - Command: AT+QCFG="nwscanmode",0
+2024-11-13 18:08:46 - Response: AT+QCFG="nwscanmode",0
+OK
+
+2024-11-13 18:08:47 - Command: AT+CGACT=0,1
+2024-11-13 18:08:47 - Waiting for response...
+
+2024-11-13 18:08:47 - Command: AT+CGACT=0,1
+2024-11-13 18:08:47 - Response: AT+CGACT=0,1
+OK
+
+2024-11-13 18:08:48 - Command: AT+COPS=3,2
+2024-11-13 18:08:48 - Waiting for response...
+
+2024-11-13 18:08:48 - Command: AT+COPS=3,2
+2024-11-13 18:08:48 - Response: AT+COPS=3,2
+OK
+
+2024-11-13 18:08:49 - Command: AT+COPS=0
+2024-11-13 18:08:49 - Waiting for response...
+
+2024-11-13 18:08:49 - Command: AT+COPS=0
+2024-11-13 18:08:49 - Response: AT+COPS=0
+OK
+
+2024-11-13 18:08:50 - Command: AT+CFUN=1
+2024-11-13 18:08:50 - Waiting for response...
+
+2024-11-13 18:08:50 - Command: AT+CFUN=1
+2024-11-13 18:08:50 - Response: AT+CFUN=1
+OK
+
+2024-11-13 18:08:51 - Command: AT+CGDCONT=1,"IP","internet"
+2024-11-13 18:08:51 - Waiting for response...
+
+2024-11-13 18:08:51 - Command: AT+CGDCONT=1,"IP","internet"
+2024-11-13 18:08:51 - Response: AT+CGDCONT=1,"IP","internet"
+OK
+
+2024-11-13 18:08:52 - Command: AT+CREG=1
+2024-11-13 18:08:52 - Waiting for response...
+
+2024-11-13 18:08:52 - Command: AT+CREG=1
+2024-11-13 18:08:52 - Response: AT+CREG=1
+OK
+
+2024-11-13 18:08:53 - Command: AT+CREG?
+2024-11-13 18:08:53 - Waiting for response...
+
+2024-11-13 18:08:53 - Command: AT+CREG?
+2024-11-13 18:08:53 - Response: AT+CREG?
++CREG: 1,1
+
+OK
+
+2024-11-13 18:08:54 - Command: AT+QNTP=1,"0.pool.ntp.org"
+2024-11-13 18:08:54 - Waiting for response...
+
+2024-11-13 18:08:54 - Command: AT+QNTP=1,"0.pool.ntp.org"
+2024-11-13 18:08:54 - Response: AT+QNTP=1,"0.pool.ntp.org"
+OK
+
++QNTP: 0,"2024/11/13,16:08:54+00"
+
+2024-11-13 18:08:55 - Command: AT+QSSLCFG="ignorelocaltime",2,1
+2024-11-13 18:08:55 - Waiting for response...
+
+2024-11-13 18:08:55 - Command: AT+QSSLCFG="ignorelocaltime",2,1
+2024-11-13 18:08:55 - Response: AT+QSSLCFG="ignorelocaltime",2,1
+OK
+
+2024-11-13 18:08:56 - Command: AT+QFDEL="tb_server_slf_Cert.pem"
+2024-11-13 18:08:56 - Waiting for response...
+
+2024-11-13 18:08:57 - Command: AT+QFDEL="tb_server_slf_Cert.pem"
+2024-11-13 18:08:57 - Response: AT+QFDEL="tb_server_slf_Cert.pem"
+OK
+AT+QFDEL="tb_server_slf_Cert.pem"
++CME ERROR: 418
+
+2024-11-13 18:08:58 - Command: AT+QFDEL="DV005_client_cert.pem"
+2024-11-13 18:08:58 - Waiting for response...
+
+2024-11-13 18:08:59 - Command: AT+QFDEL="DV005_client_cert.pem"
+2024-11-13 18:08:59 - Response: AT+QFDEL="DV005_client_cert.pem"
+OK
+AT+QFDEL="DV005_client_cert.pem"
++CME ERROR: 418
+
+2024-11-13 18:09:00 - Command: AT+QFDEL="DV005_private.pem"
+2024-11-13 18:09:00 - Waiting for response...
+
+2024-11-13 18:09:01 - Command: AT+QFDEL="DV005_private.pem"
+2024-11-13 18:09:01 - Response: AT+QFDEL="DV005_private.pem"
+OK
+AT+QFDEL="DV005_private.pem"
++CME ERROR: 418
+
+2024-11-13 18:09:02 - Command: AT+QFUPL="tb_server_slf_Cert.pem",2036,20
+2024-11-13 18:09:02 - Waiting for response...
+
+2024-11-13 18:09:04 - Command: AT+QFUPL="tb_server_slf_Cert.pem",2036,20
+2024-11-13 18:09:04 - Response: AT+QFUPL="tb_server_slf_Cert.pem",2036,20
+CONNECT
+
+2024-11-13 18:09:07 - Command: Sending file: tb_server_slf_Cert.pem
+2024-11-13 18:09:07 - Response: +QFUPL: 2036,731d
+
+OK
+
+2024-11-13 18:09:08 - Command: AT+QFUPL="DV005_client_cert.pem",1257,20
+2024-11-13 18:09:08 - Waiting for response...
+
+2024-11-13 18:09:10 - Command: AT+QFUPL="DV005_client_cert.pem",1257,20
+2024-11-13 18:09:10 - Response: AT+QFUPL="DV005_client_cert.pem",1257,20
+CONNECT
+
+2024-11-13 18:09:12 - Command: Sending file: DV005_client_cert.pem
+2024-11-13 18:09:12 - Response: +QFUPL: 1257,3f7f
+
+OK
+
+2024-11-13 18:09:13 - Command: AT+QFUPL="DV005_private.pem",1675,20
+2024-11-13 18:09:13 - Waiting for response...
+
+2024-11-13 18:09:15 - Command: AT+QFUPL="DV005_private.pem",1675,20
+2024-11-13 18:09:15 - Response: AT+QFUPL="DV005_private.pem",1675,20
+CONNECT
+
+2024-11-13 18:09:17 - Command: Sending file: DV005_private.pem
+2024-11-13 18:09:17 - Response: +QFUPL: 1675,2e67
+
+OK
+
+2024-11-13 18:09:18 - Command: AT+QSSLCFG="cacert",2,"tb_server_slf_Cert.pem"
+2024-11-13 18:09:18 - Waiting for response...
+
+2024-11-13 18:09:18 - Command: AT+QSSLCFG="cacert",2,"tb_server_slf_Cert.pem"
+2024-11-13 18:09:18 - Response: AT+QSSLCFG="cacert",2,"tb_server_slf_Cert.pem"
+OK
+
+2024-11-13 18:09:19 - Command: AT+QSSLCFG="clientcert",2,"DV005_client_cert.pem"
+2024-11-13 18:09:19 - Waiting for response...
+
+2024-11-13 18:09:19 - Command: AT+QSSLCFG="clientcert",2,"DV005_client_cert.pem"
+2024-11-13 18:09:19 - Response: AT+QSSLCFG="clientcert",2,"DV005_client_cert.pem"
+OK
+
+2024-11-13 18:09:20 - Command: AT+QSSLCFG="clientkey",2,"DV005_private.pem"
+2024-11-13 18:09:20 - Waiting for response...
+
+2024-11-13 18:09:20 - Command: AT+QSSLCFG="clientkey",2,"DV005_private.pem"
+2024-11-13 18:09:20 - Response: AT+QSSLCFG="clientkey",2,"DV005_private.pem"
+OK
+
+2024-11-13 18:09:21 - Command: AT+QSSLCFG="sslversion",2,3
+2024-11-13 18:09:21 - Waiting for response...
+
+2024-11-13 18:09:21 - Command: AT+QSSLCFG="sslversion",2,3
+2024-11-13 18:09:21 - Response: AT+QSSLCFG="sslversion",2,3
+OK
+
+2024-11-13 18:09:22 - Command: AT+QSSLCFG="sni",2,1
+2024-11-13 18:09:22 - Waiting for response...
+
+2024-11-13 18:09:22 - Command: AT+QSSLCFG="sni",2,1
+2024-11-13 18:09:22 - Response: AT+QSSLCFG="sni",2,1
+OK
+
+2024-11-13 18:09:23 - Command: AT+QSSLCFG="ciphersuite",2,0XFFFF
+2024-11-13 18:09:23 - Waiting for response...
+
+2024-11-13 18:09:23 - Command: AT+QSSLCFG="ciphersuite",2,0XFFFF
+2024-11-13 18:09:23 - Response: AT+QSSLCFG="ciphersuite",2,0XFFFF
+OK
+
+2024-11-13 18:09:24 - Command: AT+QMTCFG="version",1,4
+2024-11-13 18:09:24 - Waiting for response...
+
+2024-11-13 18:09:24 - Command: AT+QMTCFG="version",1,4
+2024-11-13 18:09:24 - Response: AT+QMTCFG="version",1,4
+OK
+
+2024-11-13 18:09:25 - Command: AT+QMTCFG="ssl",1,1,2
+2024-11-13 18:09:25 - Waiting for response...
+
+2024-11-13 18:09:25 - Command: AT+QMTCFG="ssl",1,1,2
+2024-11-13 18:09:25 - Response: AT+QMTCFG="ssl",1,1,2
+OK
+
+2024-11-13 18:09:26 - Command: AT+QMTCFG="timeout",1,10,3,1
+2024-11-13 18:09:26 - Waiting for response...
+
+2024-11-13 18:09:26 - Command: AT+QMTCFG="timeout",1,10,3,1
+2024-11-13 18:09:26 - Response: AT+QMTCFG="timeout",1,10,3,1
+OK
+
+2024-11-13 18:09:27 - Command: AT+QMTCFG="keepalive",1,300
+2024-11-13 18:09:27 - Waiting for response...
+
+2024-11-13 18:09:27 - Command: AT+QMTCFG="keepalive",1,300
+2024-11-13 18:09:27 - Response: AT+QMTCFG="keepalive",1,300
+OK
+
+2024-11-13 18:09:28 - Command: AT+QMTOPEN=1,"iot.glintech.net",8883
+2024-11-13 18:09:28 - Waiting for response...
+
+2024-11-13 18:09:28 - Command: AT+QMTOPEN=1,"iot.glintech.net",8883
+2024-11-13 18:09:28 - Response: AT+QMTOPEN=1,"iot.glintech.net",8883
+OK
+
++QMTOPEN: 1,-1
+
+2024-11-13 18:09:29 - Command: AT+QFLST="*"
+2024-11-13 18:09:29 - Waiting for response...
+
+2024-11-13 18:09:29 - Command: AT+QFLST="*"
+2024-11-13 18:09:29 - Response: AT+QFLST="*"
++QFLST: "UFS:DV005_client_cert.pem",1257
++QFLST: "UFS:DV005_private.pem",1675
++QFLST: "UFS:tb_server_slf_Cert.pem",2036
+
+OK
+
