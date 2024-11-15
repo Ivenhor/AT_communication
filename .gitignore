@@ -12,3 +12,4 @@ __pycache__/
 
 # Лог-файлы
 *.log
+serts/
